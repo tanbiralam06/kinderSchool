@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { CurriculumTabs } from "@/components/modules/academics/CurriculumTabs";
 import { AcademicMethodology } from "@/components/modules/academics/AcademicMethodology";
 
@@ -16,7 +17,13 @@ export default function AcademicsPage() {
         </div>
       </section>
 
-      <CurriculumTabs />
+      <Suspense
+        fallback={
+          <div className="py-20 text-center">Loading curriculum...</div>
+        }
+      >
+        <CurriculumTabs />
+      </Suspense>
       <AcademicMethodology />
     </div>
   );

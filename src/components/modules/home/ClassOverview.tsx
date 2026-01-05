@@ -19,7 +19,7 @@ export function ClassOverview() {
       color: "bg-blue-100 dark:bg-blue-900/20",
       iconColor: "text-blue-500",
       features: ["Sensory Play", "Social Skills", "Basic Motor Skills"],
-      link: "/academics/nursery",
+      link: "/academics?tab=nursery",
     },
     {
       title: "LKG & UKG",
@@ -29,7 +29,7 @@ export function ClassOverview() {
       color: "bg-green-100 dark:bg-green-900/20",
       iconColor: "text-green-500",
       features: ["Phonics", "Basic Math", "Creative Arts"],
-      link: "/academics/kindergarten",
+      link: "/academics?tab=kindergarten",
     },
     {
       title: "Primary (Class 1-4)",
@@ -39,7 +39,7 @@ export function ClassOverview() {
       color: "bg-orange-100 dark:bg-orange-900/20",
       iconColor: "text-orange-500",
       features: ["Subject Mastery", "Sports", "Project Work"],
-      link: "/academics/primary",
+      link: "/academics?tab=primary",
     },
   ];
 

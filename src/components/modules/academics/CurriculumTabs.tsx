@@ -1,5 +1,7 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Card,
@@ -12,6 +14,16 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, BookOpen, Music, Users, Brain } from "lucide-react";
 
 export function CurriculumTabs() {
+  const searchParams = useSearchParams();
+  const [activeTab, setActiveTab] = useState("nursery");
+
+  useEffect(() => {
+    const tab = searchParams.get("tab");
+    if (tab) {
+      setActiveTab(tab);
+    }
+  }, [searchParams]);
+
   const years = [
     {
       id: "nursery",
@@ -83,7 +95,11 @@ export function CurriculumTabs() {
   return (
     <section className="py-16 bg-background">
       <div className="container px-4 mx-auto">
-        <Tabs defaultValue="nursery" className="w-full max-w-4xl mx-auto">
+        <Tabs
+          value={activeTab}
+          onValueChange={setActiveTab}
+          className="w-full max-w-4xl mx-auto"
+        >
           <div className="flex justify-center mb-12">
             <TabsList className="grid w-full grid-cols-3 h-14 rounded-full bg-muted/50 p-1">
               {years.map((year) => (

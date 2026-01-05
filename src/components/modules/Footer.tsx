@@ -107,7 +107,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/academics/nursery"
+                  href="/academics?tab=nursery"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Nursery Program
@@ -115,7 +115,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/academics/lkg-ukg"
+                  href="/academics?tab=kindergarten"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   LKG & UKG
@@ -123,7 +123,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/academics/primary"
+                  href="/academics?tab=primary"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Primary School (1-4)
