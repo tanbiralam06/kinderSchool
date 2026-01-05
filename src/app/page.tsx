@@ -1,6 +1,8 @@
 import { Hero } from "@/components/modules/home/Hero";
 import { HomeAbout } from "@/components/modules/home/HomeAbout";
 import { ClassOverview } from "@/components/modules/home/ClassOverview";
+import { FacilitiesPreview } from "@/components/modules/home/FacilitiesPreview";
+import { EnquiryForm } from "@/components/modules/home/EnquiryForm";
 
 export default function Home() {
   return (
@@ -8,14 +10,8 @@ export default function Home() {
       <Hero />
       <HomeAbout />
       <ClassOverview />
-
-      {/* Placeholder for next sections */}
-      <section className="py-20 text-center container">
-        <h2 className="text-3xl font-bold mb-4 text-primary">Why Choose Us?</h2>
-        <p className="text-muted-foreground">
-          Facilities & Testimonials coming soon...
-        </p>
-      </section>
+      <FacilitiesPreview />
+      <EnquiryForm />
     </div>
   );
 }
