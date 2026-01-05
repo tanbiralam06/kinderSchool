@@ -45,12 +45,13 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative h-[600px] w-full overflow-hidden bg-background">
+    <section className="relative h-[calc(100vh-5rem)] min-h-[500px] w-full overflow-hidden bg-background">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
+        speed={1000}
         autoplay={{
-          delay: 5000,
+          delay: 6000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -70,26 +71,26 @@ export function Hero() {
                 src={slide.image}
                 alt={slide.title}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-[6000ms] ease-out scale-100"
                 priority
               />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40" />
+              {/* Dark Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30" />
 
               {/* Content */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="container px-4 text-center text-white">
-                  <h1 className="mb-6 text-4xl font-bold md:text-6xl lg:text-7xl drop-shadow-lg animate-in fade-in slide-in-from-bottom-5 duration-1000">
+                  <h1 className="hero-title mb-6 text-4xl font-bold md:text-6xl lg:text-7xl drop-shadow-lg opacity-0 translate-y-8">
                     {slide.title}
                   </h1>
-                  <p className="mx-auto mb-8 max-w-2xl text-lg md:text-xl lg:text-2xl drop-shadow-md animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+                  <p className="hero-subtitle mx-auto mb-8 max-w-2xl text-lg md:text-xl lg:text-2xl drop-shadow-md opacity-0 translate-y-8">
                     {slide.subtitle}
                   </p>
-                  <div className="flex justify-center gap-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
+                  <div className="hero-cta flex justify-center gap-4 opacity-0 translate-y-8">
                     <Button
                       size="lg"
-                      className="h-14 rounded-full px-8 text-lg font-bold shadow-lg"
+                      className="h-14 rounded-full px-8 text-lg font-bold shadow-lg hover:scale-105 transition-transform"
                       asChild
                     >
                       <Link href={slide.link}>
@@ -104,8 +105,9 @@ export function Hero() {
         ))}
       </Swiper>
 
-      {/* Custom Styles for Pagination */}
+      {/* Custom Animations & Styles */}
       <style jsx global>{`
+        /* Pagination */
         .swiper-pagination-bullet {
           background: rgba(255, 255, 255, 0.5);
           opacity: 1;
@@ -114,6 +116,36 @@ export function Hero() {
           background: var(--primary) !important;
           width: 32px;
           border-radius: 999px;
+        }
+
+        /* Slide Change Animations */
+        .swiper-slide-active .hero-title {
+          animation: slideUpFade 0.8s ease-out forwards;
+          animation-delay: 0.3s;
+        }
+        .swiper-slide-active .hero-subtitle {
+          animation: slideUpFade 0.8s ease-out forwards;
+          animation-delay: 0.5s;
+        }
+        .swiper-slide-active .hero-cta {
+          animation: slideUpFade 0.8s ease-out forwards;
+          animation-delay: 0.7s;
+        }
+
+        /* Slow Zoom Effect on Active Image */
+        .swiper-slide-active img {
+          transform: scale(1.1);
+        }
+
+        @keyframes slideUpFade {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
       `}</style>
     </section>
