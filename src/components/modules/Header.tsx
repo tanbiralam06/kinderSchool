@@ -17,7 +17,9 @@ export function Header() {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Academics", href: "/academics" },
+    { label: "Faculty", href: "/faculty" },
     { label: "Admissions", href: "/admissions" },
+    { label: "Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -40,13 +42,14 @@ export function Header() {
             <NavigationMenuList className="gap-2">
               {navItems.map((item) => (
                 <NavigationMenuItem key={item.href}>
-                  <Link href={item.href} legacyBehavior passHref>
-                    <NavigationMenuLink
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href={item.href}
                       className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-muted text-base font-medium`}
                     >
                       {item.label}
-                    </NavigationMenuLink>
-                  </Link>
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
             </NavigationMenuList>
