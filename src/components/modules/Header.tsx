@@ -79,12 +79,12 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent>
-              <div className="flex flex-col gap-6 mt-10">
+              <div className="flex flex-col gap-2 mt-10">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-lg font-medium hover:text-primary transition-colors"
+                    className="text-lg font-medium py-2 px-4 rounded-md hover:bg-muted hover:text-primary transition-colors"
                   >
                     {item.label}
                   </Link>
