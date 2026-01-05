@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kinder School Website - Frontend
 
-## Getting Started
+A modern, vibrant, and interactive website designed for a Kindergarten School. Built with **Next.js 14**, this project features a friendly user interface, responsive design, and a modular architecture to support easy scalability and maintenance.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Responsive Landing Page**: Engaging Hero section with Swiper.js slider, animations, and key highlights.
+- **Modular Architecture**: Component-based structure (Hero, Enquiries, Features) for better code organization.
+- **Academics Module**: Detailed curriculum breakdown (Nursery to Primary) with interactive tabs and deep linking support.
+- **Faculty Directory**: "Our Team" page displaying faculty profiles in a responsive grid layout.
+- **Interactive Gallery**: Masonry-style image grid with a custom lightbox for viewing high-resolution images.
+- **Admissions Portal**: Step-by-step admission process guide and online enquiry form.
+- **Contact Integration**: Full-width Google Maps integration and contact details.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Components**: [Shadcn/UI](https://ui.shadcn.com/) (Radix UI based)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Slider**: [Swiper.js](https://swiperjs.com/)
+- **Forms**: React Hook Form + Zod Validation
+- **Font**: [Nunito](https://fonts.google.com/specimen/Nunito) (Google Fonts)
+
+## 📂 Project Structure
+
+This project follows a modular MVC-adapted pattern for Next.js:
+
+```
+src/
+├── app/                  # App Router pages (Views)
+│   ├── academics/        # Academics page
+│   ├── admissions/       # Admissions page
+│   ├── faculty/          # Faculty & Staff page
+│   ├── gallery/          # Image Gallery
+│   └── contact/          # Contact page
+├── components/
+│   ├── ui/               # Reusable Shadcn/UI components (Buttons, Cards, Dialogs)
+│   └── modules/          # Feature-specific components
+│       ├── home/         # Home page sections (Hero, Facilities, etc.)
+│       ├── gallery/      # GalleryGrid, Lightbox
+│       └── faculty/      # FacultyGrid, Cards
+├── lib/                  # Utility functions
+└── services/             # API calls and mock data
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏁 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Follow these steps to set up the project locally.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+- Node.js 18.17 or later
+- npm or yarn or pnpm
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    git clone <repository-url>
+    cd school/frontend
+    ```
 
-## Deploy on Vercel
+2.  Install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3.  Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+4.  Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📦 Building for Production
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+The output will be generated in the `.next` folder.
+
+## 🎨 Design Philosophy
+
+- **Pastel Aesthetic**: Uses a palette of soft blues, greens, and yellows to evoke a sense of calm and playfulness suitable for early education.
+- **Accessibility**: Ensures high contrast text, semantic HTML, and keyboard navigability.
+- **User Experience**: Focuses on fast load times, smooth transitions, and intuitive navigation.
+
+## 📄 License
+
+This project is licensed under the MIT License.
