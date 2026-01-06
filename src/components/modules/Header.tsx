@@ -17,6 +17,7 @@ export function Header() {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Academics", href: "/academics" },
+    // { label: "Facilities", href: "/facilities" },
     // { label: "Faculty", href: "/faculty" },
     { label: "Admissions", href: "/admissions" },
     { label: "Gallery", href: "/gallery" },
