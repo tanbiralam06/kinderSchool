@@ -45,7 +45,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative h-[80vh] md:h-[calc(100vh-5rem)] min-h-[500px] w-full overflow-hidden bg-background">
+    <section className="relative h-[70vh] md:h-[calc(100vh-5rem)] min-h-[500px] w-full overflow-hidden bg-background">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
