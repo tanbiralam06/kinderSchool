@@ -6,12 +6,12 @@ import { ArrowRight } from "lucide-react";
 export function FacilitiesPreview() {
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1596952865768-3e4b7c6225de?q=80&w=2070&auto=format&fit=crop",
+      src: "/images/playground-children-yard.jpg",
       alt: "Colorful Playground",
       className: "col-span-12 md:col-span-8 row-span-2 h-64 md:h-96",
     },
     {
-      src: "https://images.unsplash.com/photo-1520962889368-233bb4aa97dc?q=80&w=2070&auto=format&fit=crop",
+      src: "/images/library.jpg",
       alt: "Library Corner",
       className: "col-span-12 md:col-span-4 h-64 md:h-[185px]",
     },
