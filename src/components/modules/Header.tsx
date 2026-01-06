@@ -93,7 +93,7 @@ export function Header() {
                 <div className="flex flex-col gap-3 mt-4">
                   <Button
                     variant="outline"
-                    className="w-full justify-start gap-2 rounded-xl"
+                    className="w-full gap-2 rounded-xl bg-primary text-primary-foreground hover:bg-primary/10"
                   >
                     <Phone className="h-4 w-4" /> Call Us
                   </Button>
